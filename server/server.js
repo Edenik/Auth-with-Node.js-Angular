@@ -11,5 +11,5 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/login', authRouter);
-// app.use('/events', eventRouter);
+app.use('/events', eventRouter);
 app.listen(3000);
