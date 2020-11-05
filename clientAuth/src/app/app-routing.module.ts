@@ -8,7 +8,8 @@ import { SpecialEventsComponent } from './special-events/special-events.componen
 const routes: Routes = [
   {
     path: '', 
-    redirectTo : '/events'
+    redirectTo : 'events',
+    pathMatch:'full'
   },
   {
     path: 'events', 

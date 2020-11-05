@@ -14,7 +14,7 @@ import { SpecialEventsComponent } from './special-events/special-events.componen
     LoginComponent,
     RegisterComponent,
     EventsComponent,
-    SpecialEventsComponent
+    SpecialEventsComponent,
   ],
   imports: [
     BrowserModule,
