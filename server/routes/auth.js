@@ -7,6 +7,7 @@ router.get('/' , (req,res) => {
     res.send('hello auth');
 })
 
+
 router.post('/' , (req,res) => {
     if(!req.body.email || !req.body.password){
         res.status(400).send('All fields are required!');
@@ -31,6 +32,21 @@ router.post('/' , (req,res) => {
     })
 
 })
+
+router.post('/register', (req,res) => {
+    let userData = req.body;
+    if(userData.email && userData.password){
+        let user = new userModel(userData);
+        user.save((err, registeredUser) => {
+            if(err){
+                console.log(err);
+            } else {
+                res.status(200).send('Registered Successfully')
+            }
+        });
+    }
+})
+
 
 
 module.exports = router;
