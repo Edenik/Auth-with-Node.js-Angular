@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { EventsComponent } from './events/events.component';
-import { SpecialEventsComponent } from './special-events/special-events.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { EventsComponent } from './pages/events/events.component';
+import { SpecialEventsComponent } from './pages/special-events/special-events.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SpecialEventsComponent } from './special-events/special-events.componen
     RegisterComponent,
     EventsComponent,
     SpecialEventsComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,

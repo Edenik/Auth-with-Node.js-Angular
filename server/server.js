@@ -12,4 +12,4 @@ app.use(cors());
 
 app.use('/login', authRouter);
 app.use('/events', eventRouter);
-app.listen(3000);
+app.listen(3000, () => console.log('server now running on port: 3000'));
