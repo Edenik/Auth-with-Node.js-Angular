@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http'
-import { environment } from '../environments/environment.prod';
+import { environment } from '../../environments/environment.prod';
+import { Event } from '../models/event';
 import { Observable } from 'rxjs';
 
 
@@ -12,7 +13,7 @@ export class ApiService {
   constructor(private http:HttpClient) { }
 
   getGuestEvents() : Observable <Event[]> {
-    return this.http.get<Event[]> (`${environment.apiEvents}/events/guest`);
+    return this.http.get<Event[]> (`${environment.apiEvents}/events/guests`);
   }
 
   getSpecialEvents() : Observable <Event[]> {

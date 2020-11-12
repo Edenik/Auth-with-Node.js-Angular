@@ -8,6 +8,10 @@ import { RegisterComponent } from './pages/register/register.component';
 import { EventsComponent } from './pages/events/events.component';
 import { SpecialEventsComponent } from './pages/special-events/special-events.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule,
+    FormsModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

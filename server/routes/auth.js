@@ -23,7 +23,7 @@ router.post('/' , (req,res) => {
             
         } else {
             if(user.password == req.body.password){
-                res.status(200).send('Login Success');
+                res.status(200).send(req.body);
             } else {
                 res.status(400).send('Login Failed');
             }
