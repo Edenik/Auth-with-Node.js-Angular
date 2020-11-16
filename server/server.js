@@ -10,6 +10,6 @@ app.use(express.urlencoded());
 app.use(express.json());
 app.use(cors());
 
-app.use('/login', authRouter);
+app.use('/auth', authRouter);
 app.use('/events', eventRouter);
 app.listen(3000, () => console.log('server now running on port: 3000'));

@@ -8,7 +8,7 @@ router.get('/' , (req,res) => {
 })
 
 
-router.post('/' , (req,res) => {
+router.post('/login' , (req,res) => {
     if(!req.body.email || !req.body.password){
         res.status(400).send('All fields are required!');
         return;
