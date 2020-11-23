@@ -1,6 +1,5 @@
 require('./data/database');
 const express = require('express');
-const jwt = require('jsonwebtoken');
 const authRouter = require('./routes/auth');
 const eventRouter = require('./routes/events');
 const cors = require('cors');

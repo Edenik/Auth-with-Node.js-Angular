@@ -2,6 +2,7 @@ require('../data/database');
 const express = require('express');
 const router = express.Router();
 const userModel = require('../models/User');
+const tokenValidator = require('../helpers/token_validation')
 
 router.get('/' , (req,res) => {
     res.send('hello events');
@@ -27,7 +28,7 @@ router.get('/guests' , (req,res) => {
  })
 
 
- router.get('/special' , (req,res) => {
+ router.get('/special' ,tokenValidator.verifyToken, (req,res) => {
     let events = [
      {
          "id" : "1",
