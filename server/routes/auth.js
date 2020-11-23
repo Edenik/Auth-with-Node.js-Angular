@@ -24,13 +24,16 @@ router.post('/login', (req, res) => {
             res.status(400).send('Login Failed');
 
         } else {
-            if (user.password == req.body.password) {
+           bcrypt.compare(req.body.password, user.password, (err, result)=> {
+           if(err) { throw err;};
+           if(result){
                 let payload = { subject: user._id};
                 let token = jwt.sign(payload, 'secretKey')
                 res.status(200).send({token});
             } else {
                 res.status(400).send('Login Failed');
             }
+           })
         }
 
     })

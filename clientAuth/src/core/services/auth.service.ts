@@ -11,7 +11,7 @@ export class AuthService {
 
   constructor(private http:HttpClient, private router:Router) { }
 
-  login(user:User) :Observable<User> {
+  login(user:User)  : any{
     return this.http.post<User>(`${environment.apiEvents}/auth/login`, user);
   }
 

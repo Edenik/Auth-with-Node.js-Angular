@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
   loginUser(){
    if(this.userDetailes.email != null && this.userDetailes.password != null){
     this.authService.login(this.userDetailes).subscribe(res => {
+      localStorage.setItem('token', res.token);
       this.router.navigate(['/special'])
     }, err => {
       if(err){
