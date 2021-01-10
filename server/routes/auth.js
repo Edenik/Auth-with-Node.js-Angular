@@ -58,6 +58,9 @@ router.post('/register', (req, res) => {
     }
 })
 
+
+
+/* Other functions - only for dev, no production */
 router.get("/all", async (req, res) => {
     userModel.find({}, (err, users) => {
         if (err) res.status(404).send(err);
